@@ -6,10 +6,15 @@ This is an Othello application created in Python.
 - Run `git clone https://github.com/wassy310/Othello.git`
 - Run the executable file (.exe) in the dist folder.
 
+### Method 2
+- Download the zip file from the repository screen where it says `code`.
+- Run the executable file (.exe) in the dist folder.
+
 ## Directory
 ```
 .
 ├── README.md
+├── README-ja.md
 ├── Othello-en.py
 ├── Othello-ja.py
 └── dist
