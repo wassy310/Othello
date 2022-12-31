@@ -32,14 +32,14 @@
 ## 作成者
 [鷲澤 稜河](https://github.com/wassy310)
 
+
 ## 開発環境
-```
 |       |                     |
 |  :-:  | ------------------- |
 |  OS   | Windows 10 Pro      |
 |  IDE  | Visual Studio Code  |
 |  LANG | Python              |
-```
+
 
 ## 参考
 [「プログラミング初心者がpythonの勉強がてら、オセロAIを作ってみた」をリファクタリングさせていただいた](https://qiita.com/shiracamus/items/f03127819fff0f1a4349)

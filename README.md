@@ -15,6 +15,7 @@ This is an Othello application created in Python.
   - English ver.: `dist > Othello-en > Othello-en.exe`
   - Japanese ver.: `dist > Othello-ja > Othello-ja.exe`
 
+
 ## Directory
 ```
 .
@@ -32,14 +33,14 @@ This is an Othello application created in Python.
 ## Author
 [Ryoga Washizawa](https://github.com/wassy310)
 
+
 ## Development environment
-```
 |       |                     |
 |  :-:  | ------------------- |
 |  OS   | Windows 10 Pro      |
 |  IDE  | Visual Studio Code  |
 |  LANG | Python              |
-```
+
 
 ## Reference
 [「プログラミング初心者がpythonの勉強がてら、オセロAIを作ってみた」をリファクタリングさせていただいた](https://qiita.com/shiracamus/items/f03127819fff0f1a4349)
