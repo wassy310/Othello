@@ -15,7 +15,7 @@
   - 日本語版: `dist > Othello-ja > Othello-ja.exe`
   - 英語版: `dist > Othello-en > Othello-en.exe`
 
-## Directory
+## ディレクトリ
 ```
 .
 ├── README.md -------------------- 英語版 README
@@ -29,10 +29,10 @@
         └── Othello-ja.exe ------- 日本語版オセロアプリの実行ファイル
 ```
 
-## Author
-[Ryoga Washizawa](https://github.com/wassy310)
+## 作成者
+[鷲澤 稜河](https://github.com/wassy310)
 
-## Development environment
+## 開発環境
 ```
 |       |                     |
 |  :-:  | ------------------- |
