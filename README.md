@@ -1,3 +1,4 @@
+[日本語版README](https://github.com/wassy310/Othello/blob/master/Othello-ja.py)
 # Othello
 This is an Othello application created in Python.
 
