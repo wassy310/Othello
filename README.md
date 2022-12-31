@@ -40,3 +40,6 @@ This is an Othello application created in Python.
 |  IDE  | Visual Studio Code  |
 |  LANG | Python              |
 ```
+
+## Reference
+[「プログラミング初心者がpythonの勉強がてら、オセロAIを作ってみた」をリファクタリングさせていただいた](https://qiita.com/shiracamus/items/f03127819fff0f1a4349)
