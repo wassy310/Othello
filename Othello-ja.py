@@ -5,11 +5,11 @@ from tkinter import *
 from tkinter import ttk
 
 ROW_NUM = 8
-STONE_1ST = '●'
-STONE_2ND = '○'
+first_player = '●'
+second_player = '○'
 STONE_OPPONENT = {
-    STONE_1ST: STONE_2ND,
-    STONE_2ND: STONE_1ST,
+    first_player: second_player,
+    second_player: first_player,
 }
 FONT_FAMILY = ''
 FONT_SIZE = 30
@@ -48,10 +48,10 @@ class BoardUI(ttk.Frame):
     def __init__(self, objTk=None):
         super().__init__(objTk)
         self.player1 = PlayerHuman(
-            STONE_1ST, '先手 (あなた)'
+            first_player, '先手 (あなた)'
         )
         self.player2 = PlayerCpu(
-            STONE_2ND, '後手 (CPU)'
+            second_player, '後手 (CPU)'
         )
         self.init_position_list()
         self.init_disp_list()
@@ -59,10 +59,10 @@ class BoardUI(ttk.Frame):
 
     def init_position_list(self):
         self.position_list = [[''] * ROW_NUM for i in range(ROW_NUM)]
-        self.position_list[ROW_NUM // 2 - 1][ROW_NUM // 2 - 1] = STONE_1ST
-        self.position_list[ROW_NUM // 2][ROW_NUM // 2] = STONE_1ST
-        self.position_list[ROW_NUM // 2 - 1][ROW_NUM // 2] = STONE_2ND
-        self.position_list[ROW_NUM // 2][ROW_NUM // 2 - 1] = STONE_2ND
+        self.position_list[ROW_NUM // 2 - 1][ROW_NUM // 2 - 1] = first_player
+        self.position_list[ROW_NUM // 2][ROW_NUM // 2] = first_player
+        self.position_list[ROW_NUM // 2 - 1][ROW_NUM // 2] = second_player
+        self.position_list[ROW_NUM // 2][ROW_NUM // 2 - 1] = second_player
 
     def init_disp_list(self):
         self.disp_list = [[''] * ROW_NUM for i in range(ROW_NUM)]
@@ -151,7 +151,7 @@ class BoardUI(ttk.Frame):
 
         if not [idx_x, idx_y] in able_position_list:
             self.display_var.set(
-                'この位置には石を打つことができません。'
+                'この場所には石を打つことができません。'
             )
             return
 
@@ -231,7 +231,7 @@ class PlayerCpu(PlayerBase):
 
         if pass_num > 0:
             boardUI.display_var.set(
-                '{0}は石を打つ位置がなかったため{1}回パス。石を置きたい場所をクリックしてください。'.format(
+                '{0}は石を打つ場所がなかったため{1}回パス。石を置きたい場所をクリックしてください。'.format(
                     boardUI.player1.name,
                     pass_num,
                 )
@@ -380,14 +380,14 @@ def get_evaluation(position_list, stone_put):
 
 def is_othello_end(boardUI):
     empty_num = 0
-    stone_1st_num = 0
-    stone_2nd_num = 0
-    empty_num, stone_1st_num, stone_2nd_num = get_stone_num(boardUI)
+    first_player_num = 0
+    second_player_num = 0
+    empty_num, first_player_num, second_player_num = get_stone_num(boardUI)
     if empty_num == 0:
         return True
-    elif stone_1st_num == 0:
+    elif first_player_num == 0:
         return True
-    elif stone_2nd_num == 0:
+    elif second_player_num == 0:
         return True
     else:
         return False
@@ -395,32 +395,32 @@ def is_othello_end(boardUI):
 
 def on_othello_end(boardUI):
     empty_num = 0
-    stone_1st_num = 0
-    stone_2nd_num = 0
-    empty_num, stone_1st_num, stone_2nd_num = get_stone_num(boardUI)
+    first_player_num = 0
+    second_player_num = 0
+    empty_num, first_player_num, second_player_num = get_stone_num(boardUI)
     boardUI.display_var.set(
         '{0}の石の数: {1}, {2}の石の数: {3}'.format(
             boardUI.player1.name,
-            stone_1st_num,
+            first_player_num,
             boardUI.player2.name,
-            stone_2nd_num,
+            second_player_num,
         )
     )
 
 def get_stone_num(boardUI):
     empty_num = 0
-    stone_1st_num = 0
-    stone_2nd_num = 0
+    first_player_num = 0
+    second_player_num = 0
     for x in range(ROW_NUM):
         for y in range(ROW_NUM):
             if boardUI.position_list[x][y] == '':
                 empty_num += 1
             elif boardUI.position_list[x][y] == boardUI.player1.stone:
-                stone_1st_num += 1
+                first_player_num += 1
             elif boardUI.position_list[x][y] == boardUI.player2.stone:
-                stone_2nd_num += 1
+                second_player_num += 1
 
-    return empty_num, stone_1st_num, stone_2nd_num
+    return empty_num, first_player_num, second_player_num
 
 
 def main():
