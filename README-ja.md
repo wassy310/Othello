@@ -1,4 +1,6 @@
 [README in English](https://github.com/wassy310/Othello/blob/master/README.md)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wassy310/Othello)
 # Othello
 これはPythonで作成したオセロアプリです。
 
