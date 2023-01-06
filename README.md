@@ -1,4 +1,6 @@
 [日本語版README](https://github.com/wassy310/Othello/blob/master/README-ja.md)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wassy310/Othello)
 # Othello
 This is an Othello application created in Python.
 
